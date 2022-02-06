@@ -30,7 +30,9 @@ jobs:
    - run:
       name: Testing application
       command: |
+          ls /go/src/
           ls /usr/local/go/src/
+          tree /go/src/
           go test \
           github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
 
