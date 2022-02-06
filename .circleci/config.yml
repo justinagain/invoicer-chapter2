@@ -30,7 +30,7 @@ jobs:
    - run:
       name: Testing application
       command: |
-          ls /go/src/github.com/justinagain/invoicer-chapter2
+          ls /go/src/github.com/justinagain/
           echo "github location"
           ls /usr/local/go/src
           go test \
