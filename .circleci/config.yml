@@ -31,8 +31,8 @@ jobs:
    - run:
       name: Testing application
       command: |
-          #ls /go/src/github.com/justinagain/invoicer-chapter2
-          #echo "github location"
+          ls /go/src/
+          echo "github location"
           ls /usr/local/go/src
           go test \
           github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
