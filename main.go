@@ -276,8 +276,8 @@ func checkCSRFToken(token string) bool {
 }
 
 var oauthCfg = &oauth2.Config{
-	ClientID:     "606479880714-v36tg6qtn9alsinbvfb0qtmvjdkunq4c.apps.googleusercontent.com",
-	ClientSecret: "ySBC6T-F31ez3qsA3lnNRvtr",
+	ClientID:     "163029853388-g69cjk6r2o9527cbepmpke42k3frkaeg.apps.googleusercontent.com",
+	ClientSecret: "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",
 	RedirectURL:  "http://localhost:8080/oauth2callback",
 	Scopes:       []string{"https://www.googleapis.com/auth/userinfo.profile"},
 	Endpoint: oauth2.Endpoint{
