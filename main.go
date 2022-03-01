@@ -242,3 +242,21 @@ func getVersion(w http.ResponseWriter, r *http.Request) {
 "build": "https://circleci.com/gh/Securing-DevOps/invoicer/"
 }`, version, commit)))
 }
+
+var oauthCfg = &oauth2.Config{
+   ClientID:     "***.apps.googleusercontent.com",
+   ClientSecret: "***",
+   RedirectURL:  "http://invoicer.com/oauth2callback",
+   Scopes: []string{ "https://www.googleapis.com/auth/userinfo.profile"},
+
+  Endpoint: oauth2.Endpoint{
+        AuthURL:  "https://accounts.google.com/o/oauth2/auth",
+        TokenURL: "https://accounts.google.com/o/oauth2/token",},
+}
+
+func getAuthenticate(w http.ResponseWriter, r *http.Request) {
+    url := oauthCfg.AuthCodeURL(makeCSRFToken())
+    http.Redirect(w, r, url, http.StatusTemporaryRedirect)
+}
+
+
