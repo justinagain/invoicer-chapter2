@@ -32,8 +32,8 @@ import (
 
 func init() {
 	// initialize the logger
-	mozlog.Logger.LoggerName = "invoicer"
-	log.SetFlags(0)
+	//mozlog.Logger.LoggerName = "invoicer"
+	//log.SetFlags(0)
 }
 
 type invoicer struct {
